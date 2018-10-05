@@ -1,6 +1,6 @@
 ---
 - name: Install WordPress, MariaDB, Nginx, and PHP-FPM
-  hosts: hosts
+  hosts: all_hosts
   remote_user: ansible
   # remote_user: user
   #sudo: yes
