@@ -15,3 +15,9 @@
   roles:
     - web
 
+- name: deploy MySQL and configure the databases
+  hosts: dbservers
+  remote_user: ansible
+
+  roles:
+    - db
