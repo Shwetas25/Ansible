@@ -1,5 +1,3 @@
-# Start a few existing instances, run some tasks
-# and stop the instances
 ---
 - name: Start sandbox instances
   hosts: localhost
