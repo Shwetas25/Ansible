@@ -10,7 +10,7 @@
   tags: ntp
   notify: restart ntp
 
-- name: Start the ntp service
+#- name: Start the ntp service
   service: name=ntpd state=started enabled=yes
   tags: ntp
 
