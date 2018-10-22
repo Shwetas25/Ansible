@@ -1,0 +1,13 @@
+---
+- hosts: myserver
+  remote_user: ubuntu
+  tasks:
+  - name: Gather facts
+    action: ec2_facts
+
+  - name: Stop myserver instance
+    local_action:
+        module: ec2
+        region: "us-east-1c"
+        instance_ids: "{{ansible_ec2_instance_id}}"
+        state: stopped
