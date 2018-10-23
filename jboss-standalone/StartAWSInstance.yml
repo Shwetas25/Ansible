@@ -1,18 +1,19 @@
----
-- name: Start  instances
+- name: Start sandbox instances
   hosts: localhost
   gather_facts: false
   connection: local
-vars:
+  vars:
     instance_ids:
       - 'i-xxxxxx'
       - 'i-xxxxxx'
       - 'i-xxxxxx'
     region: us-east-1
   tasks:
-    - name: Start the feature instances
+    - name: Start the sandbox instances
       ec2:
         instance_ids: '{{ instance_ids }}'
-        region: '{{ region}}'
+        region: '{{ region }}'
         state: running
         wait: True
+        vpc_subnet_id: subnet-29e63245
+        assign_public_ip: yes
