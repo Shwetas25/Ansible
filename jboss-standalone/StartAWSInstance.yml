@@ -4,13 +4,16 @@
   gather_facts: false
   connection: local
   vars:
+vars:
     instance_ids:
-      - 'i-XXXXXXXX'
-  ec2_region: us-east-1
+      - 'i-xxxxxx'
+      - 'i-xxxxxx'
+      - 'i-xxxxxx'
+    region: us-east-1
   tasks:
     - name: Start the feature instances
       ec2:
         instance_ids: '{{ instance_ids }}'
-        ec2_region: '{{ ec2_region }}'
+        region: '{{ region}}'
         state: running
         wait: True
