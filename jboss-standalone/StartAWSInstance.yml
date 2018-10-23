@@ -6,11 +6,9 @@
   vars:
     instance_ids:
       - 'i-XXXXXXXX'
-    region: ap-southeast-1
   tasks:
     - name: Start the feature instances
       ec2:
         instance_ids: '{{ instance_ids }}'
-        region: '{{ region }}'
         state: running
         wait: True
