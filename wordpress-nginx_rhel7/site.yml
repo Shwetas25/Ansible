@@ -7,7 +7,7 @@
 
   roles:
     - common
-    - mariadb
+    #- mariadb
     - nginx
     - php-fpm
     - wordpress
