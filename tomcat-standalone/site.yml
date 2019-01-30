@@ -2,7 +2,7 @@
 # This playbook deploys a simple standalone Tomcat 7 server.
   
 - hosts: all
-  remote_user: ansible
+  #remote_user: ansible
   become: yes
   become_method: sudo
 
